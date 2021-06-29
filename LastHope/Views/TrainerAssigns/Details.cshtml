@@ -1,0 +1,35 @@
+﻿@model LastHope.Models.TrainerAssign
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/StaffLayout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>TrainerAssign</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Topic.Title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Topic.Title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Trainer.Email)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Trainer.Email)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
