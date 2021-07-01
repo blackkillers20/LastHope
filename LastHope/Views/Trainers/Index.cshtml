@@ -5,9 +5,14 @@
     Layout = "~/Views/Shared/StaffLayout.cshtml";
 }
 
-<h2>Index</h2>
+<h2>Create new Trainers</h2>
+@using (Html.BeginForm("Index", "Trainers", FormMethod.Get))
+{
+    @Html.TextBox("searchString")
+    <input type="submit" name="submit" value="Search" />
+}
 
-<p>
+<p class="btn btn-info">
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
@@ -30,29 +35,34 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Email)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Name)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.DoB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Phone)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Description)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.TrainerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.TrainerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.TrainerID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DoB)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Phone)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td class="btn btn-info btn-space">
+                @Html.ActionLink("Edit", "Edit", new { id = item.TrainerID })
+            </td>
+            <td class="btn btn-success btn-space">
+                @Html.ActionLink("Details", "Details", new { id = item.TrainerID })
+            </td>
+            <td class="btn btn-danger btn-space">
+                @Html.ActionLink("Delete", "Delete", new { id = item.TrainerID })
+            </td>
+        </tr>
+    }
 
 </table>

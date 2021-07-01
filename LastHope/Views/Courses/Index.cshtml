@@ -19,16 +19,24 @@
     </tr>
 
 @foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Title)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.CourseID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.CourseID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.CourseID })
-        </td>
-    </tr>
+<tr>
+    <td>
+        @Html.DisplayFor(modelItem => item.Title)
+    </td>
+
+    <td class="btn btn-info btn-space" role="button">
+        @Html.ActionLink("Edit", "Edit", new { id = item.CourseID }) |
+    </td>
+
+    <td class="btn btn-success btn-space">
+        @Html.ActionLink("Details", "Details", new { id = item.CourseID }) |
+    </td>
+
+    <td class="btn btn-warning btn-space">
+        @Html.ActionLink("Delete", "Delete", new { id = item.CourseID })
+    </td>
+</tr>
 }
 
 </table>
+

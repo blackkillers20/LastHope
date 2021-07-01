@@ -16,9 +16,11 @@ namespace LastHope.Views
         private TrainingContext db = new TrainingContext();
 
         // GET: Trainers
-        public ActionResult Index()
+        public ViewResult Index(string searchString)
         {
-            return View(db.Trainers.ToList());
+            var trainee = from s in db.Trainers
+                          select s;
+            return View(db.Trainers.Where(s => s.Name.StartsWith(searchString) || searchString == null).ToList());
         }
 
         // GET: Trainers/Details/5
