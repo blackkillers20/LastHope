@@ -206,6 +206,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\202286800_207934911189265_6346256356408697035_n.jpg" />
+    <Content Include="images\202712250_1539678712901043_5964764043017772849_n.jpg" />
+    <Content Include="images\202765830_479582243134612_6931033123013823390_n.jpg" />
+    <Content Include="images\205777882_207308111260779_8341373109591870465_n.jpg" />
+    <Content Include="images\74599522_536275133892611_7229725840995516416_n.jpg" />
+    <Content Include="images\_.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
